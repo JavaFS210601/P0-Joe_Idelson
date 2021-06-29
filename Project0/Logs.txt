@@ -1,0 +1,12 @@
+2021-06-28 17:54:09 INFO  Menu:50 - User selected all employees
+2021-06-28 18:04:23 INFO  Menu:50 - User selected all employees
+2021-06-28 18:04:51 INFO  Menu:50 - User selected all employees
+2021-06-28 18:12:06 INFO  Menu:50 - User selected all employees
+2021-06-28 18:17:35 INFO  Menu:50 - User selected all employees
+2021-06-28 18:18:58 INFO  Menu:50 - User selected all employees
+2021-06-28 18:47:27 INFO  Menu:50 - User selected all employees
+2021-06-28 18:50:19 INFO  Menu:50 - User selected all employees
+2021-06-28 18:51:23 INFO  Menu:50 - User selected all employees
+2021-06-28 18:52:11 INFO  Menu:50 - User selected all employees
+2021-06-28 18:57:05 INFO  Menu:50 - User selected all employees
+2021-06-28 18:57:26 INFO  Menu:50 - User selected all employees

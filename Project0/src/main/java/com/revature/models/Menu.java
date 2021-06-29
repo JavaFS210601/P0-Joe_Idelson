@@ -3,6 +3,9 @@ package com.revature.models;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.revature.daos.EmployeeDao;
 
 public class Menu {
@@ -14,6 +17,10 @@ public class Menu {
 		boolean displayMenu = true; // this toggles whether the menu continues after user input
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in); // Scanner object to parse user input
+		
+		final Logger log = LogManager.getLogger(Menu.class);
+		
+		
 		
 		// greeting
 		System.out.println("Welcome to the Diablo Foods Employee Management System");
@@ -40,13 +47,15 @@ public class Menu {
 			switch(input) {
 				
 			case "employees" : {
+				log.info("User selected all employees");
 				System.out.println("Gathering all employees....");
 
 				// List of Employees that gets populated by the getEmployees method in our EmployeeDao
 				List<Employee> employees = ed.getEmployees(); 
 				// Print out each Employee from the List one by one for the user to see
 				for(Employee e: employees) {
-					System.out.println(e);
+					//System.out.println(e);
+					System.out.println(e.getEmployee_id() + ") " + e.getF_name() + " " + e.getL_name() + ", hired on: " + e.getHire_date());
 				}
 				break;
 			}
@@ -88,16 +97,16 @@ public class Menu {
 				String hire_date = scan.nextLine();
 				
 				System.out.println("Enter Role Id: "
-						+ "1) General Manager"
-						+ "2) Butcher"
-						+ "3) Cashier"
-						+ "4) Cook"
-						+ "5) Courtesy Clerk"
-						+ "6) Produce Worker"
-						+ "7) Kitchen Manager"
-						+ "8) Meat Department Manager"
-						+ "9) Wine Manager"
-						+ "10) Parking Lot Attendant"
+						+ "1)General Manager "
+						+ "2)Butcher "
+						+ "3)Cashier "
+						+ "4)Cook "
+						+ "5)Courtesy Clerk "
+						+ "6)Produce Worker "
+						+ "7)Kitchen Manager "
+						+ "8)Meat Department Manager "
+						+ "9)Wine Manager "
+						+ "10)Parking Lot Attendant "
 						);
 				int roleId = scan.nextInt();
 				scan.nextLine(); // because without nextLine, your enter keystroke will be grabbed as the next input
@@ -166,7 +175,29 @@ public class Menu {
 				int idInput = scan.nextInt();
 				scan.nextLine();
 				
-				ed.removeEmployee(idInput);
+				System.out.println("Enter Role Id: + \"1) General Manager\"\r\n"
+						+ "						+ \"2) Butcher\"\r\n"
+						+ "						+ \"3) Cashier\"\r\n"
+						+ "						+ \"4) Cook\"\r\n"
+						+ "						+ \"5) Courtesy Clerk\"\r\n"
+						+ "						+ \"6) Produce Worker\"\r\n"
+						+ "						+ \"7) Kitchen Manager\"\r\n"
+						+ "						+ \"8) Meat Department Manager\"\r\n"
+						+ "						+ \"9) Wine Manager\"\r\n"
+						+ "						+ \"10) Parking Lot Attendant\""
+						);
+				
+				int roleInput = scan.nextInt();
+				scan.nextLine();
+
+				ed.removeEmployee(idInput, roleInput);
+
+				if(roleInput == 1) {
+					System.out.println("You can not fire a General Manager!");
+					log.warn("User attempted to delete a General Manager");
+				} else {
+					ed.removeEmployee(idInput, roleInput);
+				}
 				
 				break;
 			}

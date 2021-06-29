@@ -155,19 +155,40 @@ public class EmployeeDao implements EmployeeDaoInterface {
 	}
 
 	@Override
-	public void removeEmployee(int empId) {
+	public void removeEmployee(int empId, int roleId) {
 		
 		try(Connection conn = ConnectionUtil.getConnection()){
 			
 			String sql = "DELETE FROM \"DiabloFoods\".employeeBasicDetails WHERE employee_id = ?;";
 			
+			
+			
 			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			
 			
 			ps.setInt(1, empId);
 			
+		
+			
 			ps.executeUpdate();
 			
+//			//test
+//			String managerCheck = "DELETE FROM \"DiabloFoods\".employeeBasicDetails WHERE role_id = ?;";
+//			
+//			//test
+//			PreparedStatement mc = conn.prepareStatement(managerCheck);
+//			
+//			//test
+//			mc.setInt(2, roleId);
+//			
+//			//test
+//			mc.executeUpdate();
+			
 			System.out.println("Get out of here employee # " + empId);
+			
+//			//test
+//			System.out.println(" deleted manager");
 			
 		} catch(SQLException e) {
 			System.out.println("Delete employee failed!");
@@ -175,7 +196,4 @@ public class EmployeeDao implements EmployeeDaoInterface {
 		}
 		
 	}
-
-
-
 }

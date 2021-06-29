@@ -13,5 +13,6 @@ public List<Employee> getEmployees(); // return a List of all employees
 	
 	public void changeRole(int empId, int roleId); // change an employee's roleId given their employee_id
 	
-	public void removeEmployee(int empId);
+	//test added roleId
+	public void removeEmployee(int empId, int roleId);
 }
