@@ -55,12 +55,13 @@ public class Menu {
 				// Print out each Employee from the List one by one for the user to see
 				for(Employee e: employees) {
 					//System.out.println(e);
-					System.out.println(e.getEmployee_id() + ") " + e.getF_name() + " " + e.getL_name() + ", hired on: " + e.getHire_date());
+					System.out.println(e.getEmployee_id() + ") " + e.getF_name() + " " + e.getL_name() + ", hired on: " + e.getHire_date() + ", Role Id: " + e.getRole_id());
 				}
 				break;
 			}
 			
 			case "add" : {
+				
 				// we need to prompt the user for the employee's name, and their role id
 				System.out.println("Enter Employee's First Name:");
 				String f_name = scan.nextLine();
@@ -117,7 +118,7 @@ public class Menu {
 				// Put the new Employee into the addEmployee() method in the EmployeeDao
 				ed.addEmployee(newEmployee);
 				
-				
+				log.info("User added an employee");
 				break;
 			}
 			
@@ -172,6 +173,7 @@ public class Menu {
 				
 				System.out.println("Enter the employee id of the employee to fire:");
 				
+				@SuppressWarnings("unused")
 				int idInput = scan.nextInt();
 				scan.nextLine();
 				
@@ -189,8 +191,6 @@ public class Menu {
 				
 				int roleInput = scan.nextInt();
 				scan.nextLine();
-
-		
 
 				if(roleInput == 1) {
 					System.out.println("You can not fire a General Manager!");
