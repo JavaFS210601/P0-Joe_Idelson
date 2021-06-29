@@ -10,3 +10,9 @@
 2021-06-28 18:52:11 INFO  Menu:50 - User selected all employees
 2021-06-28 18:57:05 INFO  Menu:50 - User selected all employees
 2021-06-28 18:57:26 INFO  Menu:50 - User selected all employees
+2021-06-28 19:04:07 INFO  Menu:50 - User selected all employees
+2021-06-28 19:04:20 WARN  Menu:197 - User attempted to delete a General Manager
+2021-06-28 19:05:37 INFO  Menu:50 - User selected all employees
+2021-06-28 19:06:11 INFO  Menu:50 - User selected all employees
+2021-06-28 19:07:26 INFO  Menu:50 - User selected all employees
+2021-06-28 19:08:51 INFO  Menu:50 - User selected all employees

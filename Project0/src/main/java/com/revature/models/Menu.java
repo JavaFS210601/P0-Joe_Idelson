@@ -190,13 +190,13 @@ public class Menu {
 				int roleInput = scan.nextInt();
 				scan.nextLine();
 
-				ed.removeEmployee(idInput, roleInput);
+		
 
 				if(roleInput == 1) {
 					System.out.println("You can not fire a General Manager!");
 					log.warn("User attempted to delete a General Manager");
 				} else {
-					ed.removeEmployee(idInput, roleInput);
+					System.out.println("Employee was fired succesfully!");
 				}
 				
 				break;
