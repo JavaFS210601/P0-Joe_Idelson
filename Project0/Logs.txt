@@ -24,3 +24,12 @@
 2021-06-28 22:40:24 INFO  Menu:50 - User selected all employees
 2021-06-28 22:40:56 INFO  Menu:50 - User selected all employees
 2021-06-28 22:42:04 INFO  Menu:65 - User added an employee
+2021-06-28 22:43:42 INFO  Menu:121 - User added an employee
+2021-06-29 15:47:39 INFO  Menu:48 - User selected all employees
+2021-06-29 16:08:30 INFO  Menu:118 - User added an employee
+2021-06-29 16:10:02 INFO  Menu:118 - User added an employee
+2021-06-29 16:10:18 INFO  Menu:48 - User selected all employees
+2021-06-29 16:10:43 INFO  Menu:48 - User selected all employees
+2021-06-29 23:16:02 INFO  Menu:52 - User selected all employees
+2021-06-30 00:32:26 INFO  Menu:49 - User selected all employees
+2021-06-30 00:33:27 INFO  Menu:118 - User added an employee

@@ -148,6 +148,11 @@ public class EmployeeDao implements EmployeeDaoInterface {
 			
 			System.out.println("Employee role_id changed to: " + roleId);
 			
+			//foolproofing description
+//			if(roleId == 2) {
+//				System.out.println();
+//			}
+			
 		} catch(SQLException e) {
 			System.out.println("Change role failed!");
 			e.printStackTrace();
@@ -174,4 +179,6 @@ public class EmployeeDao implements EmployeeDaoInterface {
 		}
 		
 	}
+	
+
 }
